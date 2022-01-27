@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "include": ["src", "types", "src/scripts/squidex-dev-contents/*.json"],
+  "references": [{ "path": "../model" }]
+}

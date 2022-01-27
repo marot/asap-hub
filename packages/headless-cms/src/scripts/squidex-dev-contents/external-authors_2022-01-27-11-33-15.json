@@ -1,0 +1,34 @@
+[
+  {
+    "name": {
+      "iv": "Amazing Author (Published)"
+    },
+    "orcid": {
+      "iv": null
+    }
+  },
+  {
+    "name": {
+      "iv": "New Author (updated)"
+    },
+    "orcid": {
+      "iv": null
+    }
+  },
+  {
+    "name": {
+      "iv": "Unknown Author"
+    },
+    "orcid": {
+      "iv": null
+    }
+  },
+  {
+    "name": {
+      "iv": "The John"
+    },
+    "orcid": {
+      "iv": "1111-1111-1111-1111"
+    }
+  }
+]

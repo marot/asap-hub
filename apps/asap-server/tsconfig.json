@@ -12,6 +12,7 @@
   "references": [
     { "path": "../../packages/auth" },
     { "path": "../../packages/algolia" },
+    { "path": "../../packages/headless-cms" },
     { "path": "../../packages/model" },
     { "path": "../../packages/services-common" },
     { "path": "../../packages/squidex" },

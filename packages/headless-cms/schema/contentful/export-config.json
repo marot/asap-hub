@@ -1,0 +1,14 @@
+{
+  "exportDir": "./schema/contentful",
+  "saveFile": true,
+  "contentFile": "contentful-master.json",
+  "includeDrafts": false,
+  "includeArchived": false,
+  "skipContentModel": false,
+  "skipContent": true,
+  "skipRoles": false,
+  "skipWebhooks": false,
+  "contentOnly": false,
+  "downloadAssets": false,
+  "useVerboseRenderer": false
+}
