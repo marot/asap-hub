@@ -22,17 +22,20 @@ import users from './squidex-dev-contents/users_2022-01-27-11-32-55.json';
         spaceId: '5v6w5j61tndm',
         environmentId: 'master',
       },
-    }
+    },
   );
 
   for (const lab of labs) {
-    const output = await client.entry.create({
-      contentTypeId: 'labs'
-    }, {
-      fields: {
-        'name': lab.name.iv
-      }
-    });
+    const output = await client.entry.create(
+      {
+        contentTypeId: 'labs',
+      },
+      {
+        fields: {
+          name: lab.name.iv,
+        },
+      },
+    );
 
     console.log(output);
   }
