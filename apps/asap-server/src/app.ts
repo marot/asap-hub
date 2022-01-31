@@ -6,6 +6,7 @@ import { Logger } from 'pino';
 import pinoHttp from 'pino-http';
 import AWSXray from 'aws-xray-sdk';
 import * as Sentry from '@sentry/serverless';
+import { ContentfulClient, HeadlessCms } from '@asap-hub/headless-cms';
 import { SquidexGraphql } from '@asap-hub/squidex';
 
 import decodeToken from './utils/validate-token';
@@ -22,7 +23,7 @@ import Dashboard, { DashboardController } from './controllers/dashboard';
 import Calendars, { CalendarController } from './controllers/calendars';
 import ResearchOutputs, {
   ResearchOutputController,
-} from './controllers/research-outputs';
+} from './controllers/research-outputs-headless';
 
 import { dashboardRouteFactory } from './routes/dashboard.route';
 import { calendarRouteFactory } from './routes/calendars.route';
@@ -60,6 +61,7 @@ export const appFactory = (libs: Libs = {}): Express => {
 
   // Clients
   const squidexGraphqlClient = new SquidexGraphql();
+  const headlessCms = new HeadlessCms(new ContentfulClient());
 
   // Controllers
   const calendarController =
@@ -75,7 +77,7 @@ export const appFactory = (libs: Libs = {}): Express => {
     libs.groupController || new Groups(squidexGraphqlClient);
   const pageController = libs.pageController || new Pages();
   const researchOutputController =
-    libs.researchOutputController || new ResearchOutputs(squidexGraphqlClient);
+    libs.researchOutputController || new ResearchOutputs(headlessCms.getCollection('research-outputs'));
   const teamController = libs.teamController || new Teams(squidexGraphqlClient);
   const userController = libs.userController || new Users(squidexGraphqlClient);
 

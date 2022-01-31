@@ -1,2 +1,3 @@
 getContentfulEnvironment.js
 src/config.ts
+src/scripts/squidex-dev-contents
