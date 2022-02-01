@@ -37,7 +37,11 @@ const ResearchOutputList: React.FC<ResearchOutputListProps> = ({
     pageSize,
   );
   const exportResults = () =>
+<<<<<<< HEAD
     algoliaResultsToStream<typeof RESEARCH_OUTPUT_ENTITY_TYPE>(
+=======
+    algoliaResultsToStream<'research-output'>(
+>>>>>>> refactor part 2
       createCsvFileStream(
         { headers: true },
         `SharedOutputs_${format(new Date(), 'MMddyy')}.csv`,

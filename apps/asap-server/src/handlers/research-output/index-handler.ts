@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { EventBridgeEvent } from 'aws-lambda';
+>>>>>>> refactor the client
 import { SquidexGraphql } from '@asap-hub/squidex';
 import {
   AlgoliaSearchClient,
@@ -7,6 +11,10 @@ import ResearchOutputs, {
   ResearchOutputController,
 } from '../../controllers/research-outputs';
 import { ResearchOutputEventType } from '../webhooks/webhook-research-output';
+<<<<<<< HEAD
+=======
+import { algoliaIndex } from '../../config';
+>>>>>>> refactor the client
 import logger from '../../utils/logger';
 import { EventBridgeHandler } from '../../utils/types';
 import { algoliaApiKey, algoliaAppId, algoliaIndex } from '../../config';
@@ -15,11 +23,26 @@ export const indexResearchOutputHandler =
   (
     researchOutputController: ResearchOutputController,
     algoliaClient: AlgoliaSearchClient,
+<<<<<<< HEAD
   ): EventBridgeHandler<
     ResearchOutputEventType,
     SquidexWebhookResearchOutputPayload
   > =>
   async (event) => {
+=======
+  ): ((
+    event: EventBridgeEvent<
+      ResearchOutputEventType,
+      SquidexWebhookResearchOutputPayload
+    >,
+  ) => Promise<void>) =>
+  async (
+    event: EventBridgeEvent<
+      ResearchOutputEventType,
+      SquidexWebhookResearchOutputPayload
+    >,
+  ): Promise<void> => {
+>>>>>>> refactor the client
     logger.debug(`Event ${event['detail-type']}`);
 
     try {
@@ -56,9 +79,13 @@ export type SquidexWebhookResearchOutputPayload = {
 
 export const handler = indexResearchOutputHandler(
   new ResearchOutputs(new SquidexGraphql()),
+<<<<<<< HEAD
   algoliaSearchClientFactory({
     algoliaApiKey,
     algoliaAppId,
     algoliaIndex,
   }),
+=======
+  algoliaSearchClientFactory(algoliaIndex),
+>>>>>>> refactor the client
 );

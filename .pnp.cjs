@@ -10239,7 +10239,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@asap-hub/fixtures", "workspace:packages/fixtures"],
             ["@asap-hub/model", "workspace:packages/model"],
             ["@babel/runtime-corejs3", "npm:7.14.0"],
+<<<<<<< HEAD
+<<<<<<< HEAD
             ["@types/node", "npm:14.14.45"],
+=======
+            ["@types/node", "npm:17.0.14"],
+>>>>>>> refactor the client
+=======
+            ["@types/node", "npm:14.14.45"],
+>>>>>>> refactor part 2
             ["algoliasearch", "npm:4.11.0"]
           ],
           "linkType": "SOFT",

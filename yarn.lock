@@ -300,7 +300,15 @@ __metadata:
     "@asap-hub/fixtures": "workspace:*"
     "@asap-hub/model": "workspace:*"
     "@babel/runtime-corejs3": ^7.14.0
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@types/node": ^14.14.45
+=======
+    "@types/node": ^17.0.14
+>>>>>>> refactor the client
+=======
+    "@types/node": ^14.14.45
+>>>>>>> refactor part 2
     algoliasearch: ^4.11.0
   languageName: unknown
   linkType: soft

@@ -23,6 +23,14 @@
     "@asap-hub/eslint-config-asap-hub": "workspace:*",
     "@asap-hub/fixtures": "workspace:*",
     "@asap-hub/model": "workspace:*",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@types/node": "^14.14.45"
+=======
+    "@types/node": "^17.0.14"
+>>>>>>> refactor the client
+=======
+    "@types/node": "^14.14.45"
+>>>>>>> refactor part 2
   }
 }

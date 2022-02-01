@@ -17,11 +17,16 @@ import logger from '../../utils/logger';
 import { EventBridgeHandler } from '../../utils/types';
 
 export const inviteHandlerFactory =
+<<<<<<< HEAD
   (
     sendEmail: SendEmail,
     userClient: SquidexRestClient<RestUser>,
   ): EventBridgeHandler<'UserPublished', SquidexWebhookUserPayload> =>
   async (event) => {
+=======
+  (sendEmail: SendEmail, userClient: SquidexRestClient<RestUser>) =>
+  async (event: UserInviteEventBridgeEvent): Promise<void> => {
+>>>>>>> update user index handler
     let user: RestUser;
 
     try {

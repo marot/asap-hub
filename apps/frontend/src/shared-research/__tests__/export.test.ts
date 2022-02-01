@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   createResearchOutputResponse,
   createTeamResponse,
@@ -219,6 +220,7 @@ describe('algoliaResultsToStream', () => {
       mockCsvStream as unknown as CsvFormatterStream<Row, Row>,
       () =>
         Promise.resolve(
+<<<<<<< HEAD
           createAlgoliaResponse(
             'research-output',
             [createResearchOutputResponse()],
@@ -226,6 +228,11 @@ describe('algoliaResultsToStream', () => {
               nbPages: 1,
             },
           ),
+=======
+          createAlgoliaResponse([parameters as any], {
+            nbPages: 1,
+          }),
+>>>>>>> refactor part 2
         ),
       (a) => a,
     );
@@ -241,6 +248,7 @@ describe('algoliaResultsToStream', () => {
       mockCsvStream as unknown as CsvFormatterStream<Row, Row>,
       (parameters) =>
         Promise.resolve(
+<<<<<<< HEAD
           createAlgoliaResponse(
             'research-output',
             [
@@ -253,6 +261,11 @@ describe('algoliaResultsToStream', () => {
               nbPages: 3,
             },
           ),
+=======
+          createAlgoliaResponse([parameters as any], {
+            nbPages: 3,
+          }),
+>>>>>>> refactor part 2
         ),
       (a) => a,
     );
@@ -283,6 +296,7 @@ describe('algoliaResultsToStream', () => {
       mockCsvStream as unknown as CsvFormatterStream<Row, Row>,
       () =>
         Promise.resolve(
+<<<<<<< HEAD
           createAlgoliaResponse(
             'research-output',
             [{ ...createResearchOutputResponse(), title: 'a' }],
@@ -292,6 +306,13 @@ describe('algoliaResultsToStream', () => {
           ),
         ),
       (a: ResearchOutputResponse) => ({ title: `${a.title}-b` }),
+=======
+          createAlgoliaResponse([{ example: 'a' } as any], {
+            nbPages: 2,
+          }),
+        ),
+      (a: any) => ({ example: `${a.example}-b` }),
+>>>>>>> refactor part 2
     );
     expect(mockCsvStream.write).toHaveBeenCalledWith(
       expect.objectContaining({

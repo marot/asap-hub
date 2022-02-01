@@ -89,6 +89,10 @@ const serverlessConfig: AWS = {
       LOG_LEVEL: SLS_STAGE === 'production' ? 'error' : 'info',
       NODE_OPTIONS: '--enable-source-maps',
       ALGOLIA_APP_ID: `\${ssm:algolia-app-id-${envAlias}}`,
+<<<<<<< HEAD
+=======
+      ALGOLIA_API_KEY: `\${ssm:algolia-search-api-key-${envAlias}}`,
+>>>>>>> refactor the client
       CURRENT_REVISION: '${env:CI_COMMIT_SHA}',
     },
     iamRoleStatements: [
@@ -313,6 +317,32 @@ const serverlessConfig: AWS = {
       environment: {
         ALGOLIA_API_KEY: `\${ssm:algolia-index-api-key-${envAlias}}`,
         ALGOLIA_INDEX: `asap-hub_research_outputs_${envRef}`,
+<<<<<<< HEAD
+      },
+    },
+    indexUser: {
+      handler: 'apps/asap-server/src/handlers/user/index-handler.handler',
+      events: [
+        {
+          eventBridge: {
+            eventBus: 'asap-events-${self:provider.stage}',
+            pattern: {
+              source: ['asap.user'],
+              'detail-type': [
+                'UserPublished',
+                'UserUpdated',
+                'UserCreated',
+                'UserDeleted',
+              ],
+            },
+          },
+        },
+      ],
+      environment: {
+        ALGOLIA_API_KEY: `\${ssm:algolia-index-api-key-${envAlias}}`,
+        ALGOLIA_INDEX: `asap-hub_${envRef}`,
+=======
+>>>>>>> refactor the client
       },
     },
     indexUser: {
@@ -379,6 +409,44 @@ const serverlessConfig: AWS = {
       environment: {
         EVENT_BUS: 'asap-events-${self:provider.stage}',
         EVENT_SOURCE: 'asap.calendar',
+      },
+    },
+    labUpserted: {
+      handler: 'apps/asap-server/src/handlers/webhooks/webhook-lab.handler',
+      events: [
+        {
+          httpApi: {
+            method: 'POST',
+            path: '/webhook/labs',
+          },
+        },
+      ],
+      environment: {
+        EVENT_BUS: 'asap-events-${self:provider.stage}',
+        EVENT_SOURCE: 'asap.lab',
+      },
+    },
+    indexLabUsers: {
+      handler: 'apps/asap-server/src/handlers/lab/users-handler.handler',
+      events: [
+        {
+          eventBridge: {
+            eventBus: 'asap-events-${self:provider.stage}',
+            pattern: {
+              source: ['asap.lab'],
+              'detail-type': [
+                'LabPublished',
+                'LabUpdated',
+                'LabCreated',
+                'LabDeleted',
+              ],
+            },
+          },
+        },
+      ],
+      environment: {
+        ALGOLIA_API_KEY: `\${ssm:algolia-index-api-key-${envAlias}}`,
+        ALGOLIA_INDEX: `asap-hub_${envRef}`,
       },
     },
     userUpserted: {
@@ -454,7 +522,26 @@ const serverlessConfig: AWS = {
       },
     },
     indexTeamResearchOutputs: {
-      handler: 'apps/asap-server/src/handlers/teams/index-handler.handler',
+      handler:
+        'apps/asap-server/src/handlers/teams/research-outputs-handler.handler',
+      events: [
+        {
+          eventBridge: {
+            eventBus: 'asap-events-${self:provider.stage}',
+            pattern: {
+              source: ['asap.teams'],
+              'detail-type': ['TeamsCreated', 'TeamsUpdated', 'TeamsDeleted'],
+            },
+          },
+        },
+      ],
+      environment: {
+        ALGOLIA_API_KEY: `\${ssm:algolia-index-api-key-${envAlias}}`,
+        ALGOLIA_INDEX: `asap-hub_research_outputs_${envRef}`,
+      },
+    },
+    indexTeamUsers: {
+      handler: 'apps/asap-server/src/handlers/teams/users-handler.handler',
       events: [
         {
           eventBridge: {

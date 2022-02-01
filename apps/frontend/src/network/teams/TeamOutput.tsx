@@ -11,6 +11,8 @@ import {
 import { usePostTeamResearchOutput } from './state';
 import Frame from '../../structure/Frame';
 import researchSuggestions from './research-suggestions';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 const useParamOutputType = (teamId: string): OutputTypeParameter => {
   const route = network({}).teams({}).team({ teamId }).createOutput;
@@ -36,6 +38,10 @@ export function paramOutputTypeToResearchOutputType(
       return 'Article';
   }
 }
+=======
+>>>>>>> Rebase
+=======
+>>>>>>> rebase
 
 type TeamOutputProps = {
   teamId: string;

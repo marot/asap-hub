@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ALGOLIA_APP_ID, ALGOLIA_INDEX } from '@asap-hub/frontend/src/config';
+=======
+import { ALGOLIA_INDEX } from '@asap-hub/frontend/src/config';
+>>>>>>> refactor the client
 import { renderHook } from '@testing-library/react-hooks';
 import { RecoilRoot } from 'recoil';
 import { algoliaSearchClientFactory } from '@asap-hub/algolia';
@@ -36,11 +40,22 @@ describe('useAlgolia', () => {
       ),
     });
     await waitForNextUpdate();
+<<<<<<< HEAD
+<<<<<<< HEAD
     expect(mockAlgoliaSearchClientFactory).toHaveBeenCalledWith({
       algoliaIndex: ALGOLIA_INDEX,
       algoliaAppId: ALGOLIA_APP_ID,
       algoliaApiKey: 'algolia key',
     });
+=======
+    expect(mockAlgoliaSearchClientFactory).toHaveBeenCalledWith(ALGOLIA_INDEX);
+>>>>>>> refactor the client
+=======
+    expect(mockAlgoliaSearchClientFactory).toHaveBeenCalledWith(
+      ALGOLIA_INDEX,
+      'algolia key',
+    );
+>>>>>>> refactor part 2
     expect(result.current.client).toBeDefined();
   });
 });

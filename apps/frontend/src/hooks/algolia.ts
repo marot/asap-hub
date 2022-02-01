@@ -5,7 +5,11 @@ import {
   AlgoliaSearchClient,
 } from '@asap-hub/algolia';
 import { User } from '@asap-hub/auth';
+<<<<<<< HEAD
 import { ALGOLIA_APP_ID, ALGOLIA_INDEX } from '../config';
+=======
+import { ALGOLIA_INDEX } from '../config';
+>>>>>>> refactor the client
 
 export type AlgoliaHook = {
   client: AlgoliaSearchClient;
@@ -17,11 +21,18 @@ export const useAlgolia = () => {
       throw new Error('Algolia unavailable while not logged in');
     }
 
+<<<<<<< HEAD
     const client = algoliaSearchClientFactory({
       algoliaAppId: ALGOLIA_APP_ID,
       algoliaIndex: ALGOLIA_INDEX,
       algoliaApiKey: user.algoliaApiKey,
     });
+=======
+    const client = algoliaSearchClientFactory(
+      ALGOLIA_INDEX,
+      user.algoliaApiKey,
+    );
+>>>>>>> refactor the client
 
     return {
       client,

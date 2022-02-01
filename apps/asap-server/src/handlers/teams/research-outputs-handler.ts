@@ -1,12 +1,23 @@
+<<<<<<< HEAD
+=======
+import { EventBridgeEvent } from 'aws-lambda';
+>>>>>>> refactor the client
 import {
   AlgoliaSearchClient,
   algoliaSearchClientFactory,
 } from '@asap-hub/algolia';
 import { SquidexGraphql } from '@asap-hub/squidex';
-import { TeamsEventType } from '../webhooks/webhook-teams';
+import {
+  TeamsEventType,
+  SquidexWebhookTeamPayload,
+} from '../webhooks/webhook-teams';
 import ResearchOutputs, {
   ResearchOutputController,
 } from '../../controllers/research-outputs';
+<<<<<<< HEAD
+=======
+import { algoliaIndex } from '../../config';
+>>>>>>> refactor the client
 import logger from '../../utils/logger';
 import { EventBridgeHandler } from '../../utils/types';
 import { algoliaApiKey, algoliaAppId, algoliaIndex } from '../../config';
@@ -15,8 +26,17 @@ export const indexResearchOutputByTeamHandler =
   (
     researchOutputController: ResearchOutputController,
     algoliaClient: AlgoliaSearchClient,
+<<<<<<< HEAD
   ): EventBridgeHandler<TeamsEventType, SquidexWebhookTeamPayload> =>
   async (event) => {
+=======
+  ): ((
+    event: EventBridgeEvent<TeamsEventType, SquidexWebhookTeamPayload>,
+  ) => Promise<void>) =>
+  async (
+    event: EventBridgeEvent<TeamsEventType, SquidexWebhookTeamPayload>,
+  ): Promise<void> => {
+>>>>>>> refactor the client
     const outputsIds = Array.from(
       new Set(
         (event.detail.payload.data.outputs.iv ?? []).concat(
@@ -45,22 +65,11 @@ export const indexResearchOutputByTeamHandler =
     }
   };
 
-export type SquidexWebhookTeamPayload = {
-  type: 'TeamsCreated' | 'TeamsUpdated';
-  payload: {
-    $type: 'EnrichedContentEvent';
-    type: 'Created';
-    id: string;
-    data: {
-      outputs: { iv: string[] };
-    };
-    dataOld?: {
-      outputs: { iv: string[] };
-    };
-  };
-};
-
 export const handler = indexResearchOutputByTeamHandler(
   new ResearchOutputs(new SquidexGraphql()),
+<<<<<<< HEAD
   algoliaSearchClientFactory({ algoliaApiKey, algoliaAppId, algoliaIndex }),
+=======
+  algoliaSearchClientFactory(algoliaIndex),
+>>>>>>> refactor the client
 );
