@@ -32,7 +32,20 @@ export default class ResearchOutputs implements ResearchOutputController {
     search?: string;
     filter?: string[];
   }): Promise<ListResearchOutputResponse> {
-    return this.headlessResarchOutputs.fetch(options);
+    return this.headlessResarchOutputs.fetch({
+      AND: [
+        {
+          OR: (options.search || '')
+            .split(' ')
+            .map((word: string) => ({ OR: [{ title_contains: word }] })), // add tag_contains
+        },
+        {
+          OR: (options.filter || []).map((word: string) => ({
+            OR: [{ title_contains: word }],
+          })), // change to type_contains
+        },
+      ],
+    });
   }
 }
 

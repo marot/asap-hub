@@ -5,10 +5,12 @@ import { ResearchOutputsCollection } from './cms/contentful/collections/research
 import { ResearchOutputResponse } from '@asap-hub/model';
 
 export type CollectionId = 'research-outputs' | 'users';
-export type CollectionIdToHeadlessCmsCollection<T extends CollectionId> = T extends 'research-outputs' ? HeadlessCmsCollection<ResearchOutputResponse> : null;
+export type CollectionIdToHeadlessCmsCollection<T extends CollectionId> =
+  T extends 'research-outputs'
+    ? HeadlessCmsCollection<ResearchOutputResponse>
+    : null;
 
-
-export class HeadlessCms{
+export class HeadlessCms {
   private contentfulClient: ContentfulClient;
 
   constructor(contentfulClient: ContentfulClient) {
@@ -19,8 +21,10 @@ export class HeadlessCms{
     collectionId: T,
   ): CollectionIdToHeadlessCmsCollection<T>;
 
-  getCollection<T extends CollectionId>(collectionId: T): ResearchOutputsCollection|null {
-    switch(collectionId) {
+  getCollection<T extends CollectionId>(
+    collectionId: T,
+  ): ResearchOutputsCollection | null {
+    switch (collectionId) {
       case 'research-outputs':
         return new ResearchOutputsCollection(this.contentfulClient);
     }

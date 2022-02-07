@@ -77,7 +77,8 @@ export const appFactory = (libs: Libs = {}): Express => {
     libs.groupController || new Groups(squidexGraphqlClient);
   const pageController = libs.pageController || new Pages();
   const researchOutputController =
-    libs.researchOutputController || new ResearchOutputs(headlessCms.getCollection('research-outputs'));
+    libs.researchOutputController ||
+    new ResearchOutputs(headlessCms.getCollection('research-outputs'));
   const teamController = libs.teamController || new Teams(squidexGraphqlClient);
   const userController = libs.userController || new Users(squidexGraphqlClient);
 
