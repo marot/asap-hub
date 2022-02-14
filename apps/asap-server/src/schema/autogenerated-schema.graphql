@@ -17,7 +17,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -28,7 +28,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -39,7 +39,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -50,7 +50,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -61,7 +61,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -72,7 +72,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -83,7 +83,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -94,7 +94,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -105,7 +105,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -116,7 +116,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -127,7 +127,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -138,7 +138,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -149,7 +149,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -394,7 +394,7 @@ type AppMutations {
     data: CalendarsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Calendars!
   """Patch an Dashboard content by id."""
@@ -403,7 +403,7 @@ type AppMutations {
     data: DashboardDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Dashboard!
   """Patch an Discover ASAP content by id."""
@@ -412,7 +412,7 @@ type AppMutations {
     data: DiscoverDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Discover!
   """Patch an Events content by id."""
@@ -421,7 +421,7 @@ type AppMutations {
     data: EventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Events!
   """Patch an External authors content by id."""
@@ -430,7 +430,7 @@ type AppMutations {
     data: ExternalAuthorsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): ExternalAuthors!
   """Patch an Groups content by id."""
@@ -439,7 +439,7 @@ type AppMutations {
     data: GroupsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Groups!
   """Patch an Labs content by id."""
@@ -448,7 +448,7 @@ type AppMutations {
     data: LabsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Labs!
   """Patch an Migrations content by id."""
@@ -457,7 +457,7 @@ type AppMutations {
     data: MigrationsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Migrations!
   """Patch an News content by id."""
@@ -466,7 +466,7 @@ type AppMutations {
     data: NewsAndEventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): NewsAndEvents!
   """Patch an Pages content by id."""
@@ -475,7 +475,7 @@ type AppMutations {
     data: PagesDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Pages!
   """Patch an Research Outputs content by id."""
@@ -484,7 +484,7 @@ type AppMutations {
     data: ResearchOutputsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): ResearchOutputs!
   """Patch an Teams content by id."""
@@ -493,7 +493,7 @@ type AppMutations {
     data: TeamsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Teams!
   """Patch an Users content by id."""
@@ -502,7 +502,7 @@ type AppMutations {
     data: UsersDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Users!
   """Publish a Calendars content."""
@@ -511,7 +511,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -522,7 +522,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -533,7 +533,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -544,7 +544,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -555,7 +555,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -566,7 +566,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -577,7 +577,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -588,7 +588,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -599,7 +599,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -610,7 +610,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -621,7 +621,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -632,7 +632,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -643,7 +643,7 @@ type AppMutations {
     dueTime: Instant
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The status for the content."""
     status: String!
@@ -654,7 +654,7 @@ type AppMutations {
     data: CalendarsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Calendars!
   """Update an Dashboard content by id."""
@@ -663,7 +663,7 @@ type AppMutations {
     data: DashboardDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Dashboard!
   """Update an Discover ASAP content by id."""
@@ -672,7 +672,7 @@ type AppMutations {
     data: DiscoverDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Discover!
   """Update an Events content by id."""
@@ -681,7 +681,7 @@ type AppMutations {
     data: EventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Events!
   """Update an External authors content by id."""
@@ -690,7 +690,7 @@ type AppMutations {
     data: ExternalAuthorsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): ExternalAuthors!
   """Update an Groups content by id."""
@@ -699,7 +699,7 @@ type AppMutations {
     data: GroupsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Groups!
   """Update an Labs content by id."""
@@ -708,7 +708,7 @@ type AppMutations {
     data: LabsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Labs!
   """Update an Migrations content by id."""
@@ -717,7 +717,7 @@ type AppMutations {
     data: MigrationsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Migrations!
   """Update an News content by id."""
@@ -726,7 +726,7 @@ type AppMutations {
     data: NewsAndEventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): NewsAndEvents!
   """Update an Pages content by id."""
@@ -735,7 +735,7 @@ type AppMutations {
     data: PagesDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Pages!
   """Update an Research Outputs content by id."""
@@ -744,7 +744,7 @@ type AppMutations {
     data: ResearchOutputsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): ResearchOutputs!
   """Update an Teams content by id."""
@@ -753,7 +753,7 @@ type AppMutations {
     data: TeamsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Teams!
   """Update an Users content by id."""
@@ -762,7 +762,7 @@ type AppMutations {
     data: UsersDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String
   ): Users!
   """Upsert an Calendars content by id."""
@@ -771,7 +771,7 @@ type AppMutations {
     data: CalendarsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -784,7 +784,7 @@ type AppMutations {
     data: DashboardDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -797,7 +797,7 @@ type AppMutations {
     data: DiscoverDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -810,7 +810,7 @@ type AppMutations {
     data: EventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -823,7 +823,7 @@ type AppMutations {
     data: ExternalAuthorsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -836,7 +836,7 @@ type AppMutations {
     data: GroupsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -849,7 +849,7 @@ type AppMutations {
     data: LabsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -862,7 +862,7 @@ type AppMutations {
     data: MigrationsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -875,7 +875,7 @@ type AppMutations {
     data: NewsAndEventsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -888,7 +888,7 @@ type AppMutations {
     data: PagesDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -901,7 +901,7 @@ type AppMutations {
     data: ResearchOutputsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -914,7 +914,7 @@ type AppMutations {
     data: TeamsDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -927,7 +927,7 @@ type AppMutations {
     data: UsersDataInputDto!
     """The expected version."""
     expectedVersion: Int = -2
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """Set to true to autopublish content on create."""
     publish: Boolean = false
@@ -945,91 +945,91 @@ type AppQueries {
   ): Asset
   """Find an Calendars content by id."""
   findCalendarsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Calendars
   """Find an Dashboard content by id."""
   findDashboardContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Dashboard
   """Find an Discover ASAP content by id."""
   findDiscoverContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Discover
   """Find an Events content by id."""
   findEventsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Events
   """Find an External authors content by id."""
   findExternalAuthorsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): ExternalAuthors
   """Find an Groups content by id."""
   findGroupsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Groups
   """Find an Labs content by id."""
   findLabsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Labs
   """Find an Migrations content by id."""
   findMigrationsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Migrations
   """Find an News content by id."""
   findNewsAndEventsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): NewsAndEvents
   """Find an Pages content by id."""
   findPagesContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Pages
   """Find an Research Outputs content by id."""
   findResearchOutputsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): ResearchOutputs
   """Find an Teams content by id."""
   findTeamsContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
   ): Teams
   """Find an Users content by id."""
   findUsersContent(
-    """The ID of the object (usually GUID)."""
+    """The ID of the object."""
     id: String!
     """The optional version of the content to retrieve an older instance (not cached)."""
     version: Int
@@ -1404,8 +1404,6 @@ type Asset {
   createdBy: String!
   """The user who created the object."""
   createdByUser: User!
-  """The edit token."""
-  editToken: String
   """The hash of the file. Can be null for old files."""
   fileHash: String!
   """The file name of the asset."""
@@ -1416,7 +1414,7 @@ type Asset {
   fileType: String!
   """The version of the file."""
   fileVersion: Int!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """Determines if the uploaded file is an image."""
   isImage: Boolean! @deprecated(reason: "Use 'type' field instead.")
@@ -1449,11 +1447,11 @@ type Asset {
   tags: [String!]!
   """The thumbnail URL to the asset."""
   thumbnailUrl: String
-  """The type of the asset."""
+  """The type of the image."""
   type: AssetType!
   """The URL to the asset."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -1482,11 +1480,9 @@ type Calendars implements Content {
   createdByUser: User!
   """The data of the content."""
   data: CalendarsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: CalendarsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -1556,7 +1552,7 @@ type Calendars implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -1673,7 +1669,7 @@ interface Content {
   created: Instant!
   """The user who created the object."""
   createdBy: String!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -1689,7 +1685,7 @@ interface Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -1703,11 +1699,9 @@ type Dashboard implements Content {
   createdByUser: User!
   """The data of the content."""
   data: DashboardDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: DashboardFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -1777,7 +1771,7 @@ type Dashboard implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -1837,11 +1831,9 @@ type Discover implements Content {
   createdByUser: User!
   """The data of the content."""
   data: DiscoverDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: DiscoverFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -1937,7 +1929,7 @@ type Discover implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -2042,11 +2034,9 @@ type Events implements Content {
   createdByUser: User!
   """The data of the content."""
   data: EventsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: EventsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -2090,7 +2080,7 @@ type Events implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -2462,11 +2452,9 @@ type ExternalAuthors implements Content {
   createdByUser: User!
   """The data of the content."""
   data: ExternalAuthorsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: ExternalAuthorsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -2510,7 +2498,7 @@ type ExternalAuthors implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -2573,11 +2561,9 @@ type Groups implements Content {
   createdByUser: User!
   """The data of the content."""
   data: GroupsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: GroupsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -2673,7 +2659,7 @@ type Groups implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -2857,11 +2843,9 @@ type Labs implements Content {
   createdByUser: User!
   """The data of the content."""
   data: LabsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: LabsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -2931,7 +2915,7 @@ type Labs implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -2980,11 +2964,9 @@ type Migrations implements Content {
   createdByUser: User!
   """The data of the content."""
   data: MigrationsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: MigrationsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -3002,7 +2984,7 @@ type Migrations implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -3049,11 +3031,9 @@ type NewsAndEvents implements Content {
   createdByUser: User!
   """The data of the content."""
   data: NewsAndEventsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: NewsAndEventsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -3123,7 +3103,7 @@ type NewsAndEvents implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -3276,11 +3256,9 @@ type Pages implements Content {
   createdByUser: User!
   """The data of the content."""
   data: PagesDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: PagesFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -3350,7 +3328,7 @@ type Pages implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -3462,11 +3440,9 @@ type ResearchOutputs implements Content {
   createdByUser: User!
   """The data of the content."""
   data: ResearchOutputsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: ResearchOutputsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -3588,7 +3564,7 @@ type ResearchOutputs implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -3932,11 +3908,9 @@ type Teams implements Content {
   createdByUser: User!
   """The data of the content."""
   data: TeamsDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: TeamsFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -4032,7 +4006,7 @@ type Teams implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 
@@ -4194,11 +4168,9 @@ type Users implements Content {
   createdByUser: User!
   """The data of the content."""
   data: UsersDataDto!
-  """The edit token."""
-  editToken: String
   """The flat data of the content."""
   flatData: UsersFlatDataDto!
-  """The ID of the object (usually GUID)."""
+  """The ID of the object."""
   id: String!
   """The timestamp when the object was updated the last time."""
   lastModified: Instant!
@@ -4346,7 +4318,7 @@ type Users implements Content {
   statusColor: String!
   """The URL to the content."""
   url: String!
-  """The version of the objec."""
+  """The version of the object (usually GUID)."""
   version: Int!
 }
 

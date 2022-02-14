@@ -1365,8 +1365,6 @@ export type Asset = {
   createdBy: Scalars['String'];
   /** The user who created the object. */
   createdByUser: User;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The hash of the file. Can be null for old files. */
   fileHash: Scalars['String'];
   /** The file name of the asset. */
@@ -1377,7 +1375,7 @@ export type Asset = {
   fileType: Scalars['String'];
   /** The version of the file. */
   fileVersion: Scalars['Int'];
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /**
    * Determines if the uploaded file is an image.
@@ -1416,11 +1414,11 @@ export type Asset = {
   tags: Array<Scalars['String']>;
   /** The thumbnail URL to the asset. */
   thumbnailUrl: Maybe<Scalars['String']>;
-  /** The type of the asset. */
+  /** The type of the image. */
   type: AssetType;
   /** The URL to the asset. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -1454,11 +1452,9 @@ export type Calendars = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: CalendarsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: CalendarsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -1484,7 +1480,7 @@ export type Calendars = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -1637,7 +1633,7 @@ export type Content = {
   created: Scalars['Instant'];
   /** The user who created the object. */
   createdBy: Scalars['String'];
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -1653,7 +1649,7 @@ export type Content = {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -1667,11 +1663,9 @@ export type Dashboard = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: DashboardDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: DashboardFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -1697,7 +1691,7 @@ export type Dashboard = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -1793,11 +1787,9 @@ export type Discover = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: DiscoverDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: DiscoverFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -1827,7 +1819,7 @@ export type Discover = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -1986,11 +1978,9 @@ export type Events = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: EventsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: EventsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2012,7 +2002,7 @@ export type Events = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -2402,11 +2392,9 @@ export type ExternalAuthors = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: ExternalAuthorsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: ExternalAuthorsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2428,7 +2416,7 @@ export type ExternalAuthors = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -2509,11 +2497,9 @@ export type Groups = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: GroupsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: GroupsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2543,7 +2529,7 @@ export type Groups = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -2775,11 +2761,9 @@ export type Labs = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: LabsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: LabsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2805,7 +2789,7 @@ export type Labs = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -2888,11 +2872,9 @@ export type Migrations = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: MigrationsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: MigrationsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2910,7 +2892,7 @@ export type Migrations = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -2957,11 +2939,9 @@ export type NewsAndEvents = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: NewsAndEventsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: NewsAndEventsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -2987,7 +2967,7 @@ export type NewsAndEvents = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -3170,11 +3150,9 @@ export type Pages = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: PagesDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: PagesFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -3200,7 +3178,7 @@ export type Pages = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -3348,11 +3326,9 @@ export type ResearchOutputs = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: ResearchOutputsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: ResearchOutputsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -3386,7 +3362,7 @@ export type ResearchOutputs = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -3790,11 +3766,9 @@ export type Teams = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: TeamsDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: TeamsFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -3824,7 +3798,7 @@ export type Teams = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
@@ -4040,11 +4014,9 @@ export type Users = Content & {
   createdByUser: User;
   /** The data of the content. */
   data: UsersDataDto;
-  /** The edit token. */
-  editToken: Maybe<Scalars['String']>;
   /** The flat data of the content. */
   flatData: UsersFlatDataDto;
-  /** The ID of the object (usually GUID). */
+  /** The ID of the object. */
   id: Scalars['String'];
   /** The timestamp when the object was updated the last time. */
   lastModified: Scalars['Instant'];
@@ -4082,7 +4054,7 @@ export type Users = Content & {
   statusColor: Scalars['String'];
   /** The URL to the content. */
   url: Scalars['String'];
-  /** The version of the objec. */
+  /** The version of the object (usually GUID). */
   version: Scalars['Int'];
 };
 
