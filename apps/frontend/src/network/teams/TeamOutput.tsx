@@ -8,7 +8,12 @@ import {
   useRouteParams,
   OutputTypeParameter,
 } from '@asap-hub/routing';
-import { useLabSuggestions, usePostTeamResearchOutput } from './state';
+import {
+  useLabSuggestions,
+  usePostTeamResearchOutput,
+  useTeamById,
+  useTeamSuggestions,
+} from './state';
 import Frame from '../../structure/Frame';
 import researchSuggestions from './research-suggestions';
 
@@ -43,7 +48,7 @@ type TeamOutputProps = {
 const TeamOutput: React.FC<TeamOutputProps> = ({ teamId }) => {
   const paramOutputType = useParamOutputType(teamId);
   const type = paramOutputTypeToResearchOutputType(paramOutputType);
-
+  const team = useTeamById(teamId);
   const { isEnabled } = useFlags();
 
   const createResearchOutput = usePostTeamResearchOutput();
@@ -64,15 +69,19 @@ const TeamOutput: React.FC<TeamOutputProps> = ({ teamId }) => {
 
   const getLabSuggestions = useLabSuggestions();
 
+  const getTeamSuggestions = useTeamSuggestions();
+
   const showCreateOutputPage = isEnabled('ROMS_FORM');
 
-  if (showCreateOutputPage) {
+  if (showCreateOutputPage && team) {
     return (
       <Frame title="Share Research Output">
         <TeamCreateOutputPage
+          team={team}
           tagSuggestions={researchSuggestions}
           type={type}
           getLabSuggestions={getLabSuggestions}
+          getTeamSuggestions={getTeamSuggestions}
           onSave={(output) =>
             createResearchOutput({
               ...defaultOutput,

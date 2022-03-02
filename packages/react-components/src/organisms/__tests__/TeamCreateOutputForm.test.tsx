@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { StaticRouter } from 'react-router-dom';
 import { ComponentProps } from 'react';
 import { fireEvent, waitFor } from '@testing-library/dom';
+import { createTeamResponse } from '@asap-hub/fixtures';
 
 import TeamCreateOutputForm from '../TeamCreateOutputForm';
 import { ENTER_KEYCODE } from '../../atoms/Dropdown';
@@ -11,6 +12,8 @@ const props: ComponentProps<typeof TeamCreateOutputForm> = {
   tagSuggestions: [],
   type: 'Article',
   getLabSuggestions: jest.fn(),
+  getTeamSuggestions: jest.fn(),
+  team: createTeamResponse(),
 };
 
 const clickShare = () => {

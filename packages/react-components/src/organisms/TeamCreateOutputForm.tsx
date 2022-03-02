@@ -4,6 +4,7 @@ import {
   ResearchOutputPostRequest,
   ResearchOutputResponse,
   ResearchOutputType,
+  TeamResponse,
 } from '@asap-hub/model';
 
 import {
@@ -38,11 +39,15 @@ type TeamCreateOutputFormProps = Pick<
 > & {
   getLabSuggestions: ComponentProps<
     typeof TeamCreateOutputContributorsCard
-  >['labSuggestions'];
+  >['getLabSuggestions'];
+  getTeamSuggestions: ComponentProps<
+    typeof TeamCreateOutputContributorsCard
+  >['getTeamSuggestions'];
   onSave?: (
     output: Partial<ResearchOutputPostRequest>,
   ) => Promise<Pick<ResearchOutputResponse, 'id'>>;
   type: ResearchOutputType;
+  team: TeamResponse;
 };
 
 const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
@@ -50,6 +55,8 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
   tagSuggestions,
   type,
   getLabSuggestions,
+  getTeamSuggestions,
+  team,
 }) => {
   const [tags, setTags] = useState<ResearchOutputPostRequest['tags']>([]);
   const [subTypes, setSubtypes] = useState<
@@ -59,9 +66,13 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
   const [labs, setLabs] = useState<
     NonNullable<ComponentProps<typeof TeamCreateOutputContributorsCard>['labs']>
   >([]);
+  const [teams, setTeams] = useState<
+    NonNullable<ComponentProps<typeof TeamCreateOutputContributorsCard>['labs']>
+  >([{ label: team.displayName, value: team.id, isFixed: true }]);
   const [description, setDescription] =
     useState<ResearchOutputPostRequest['description']>('');
   const [link, setLink] = useState<ResearchOutputPostRequest['link']>('');
+
   return (
     <Form
       dirty={
@@ -106,9 +117,12 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
 
           <TeamCreateOutputContributorsCard
             isSaving={isSaving}
-            labSuggestions={getLabSuggestions}
+            getLabSuggestions={getLabSuggestions}
             labs={labs}
             onChangeLabs={setLabs}
+            onChangeTeams={setTeams}
+            teams={teams}
+            getTeamSuggestions={getTeamSuggestions}
           />
           <div css={formControlsContainerStyles}>
             <div style={{ display: 'block' }}>

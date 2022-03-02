@@ -142,11 +142,25 @@ export const usePostTeamResearchOutput = () => {
 
 export const useLabSuggestions = () => {
   const authorization = useRecoilValue(authorizationState);
-  return async (searchQuery: string) =>
-    (
-      await getLabs(
-        { searchQuery, filters: new Set(), currentPage: null, pageSize: null },
-        authorization,
-      )
-    ).items.map(({ id, name }) => ({ label: `${name} Lab`, value: id }));
+  return (searchQuery: string) =>
+    getLabs(
+      { searchQuery, filters: new Set(), currentPage: null, pageSize: null },
+      authorization,
+    ).then(({ items }) =>
+      items.map(({ id, name }) => ({ label: `${name} Lab`, value: id })),
+    );
+};
+
+export const useTeamSuggestions = () => {
+  const authorization = useRecoilValue(authorizationState);
+  return (searchQuery: string) =>
+    getTeams(
+      { searchQuery, filters: new Set(), currentPage: null, pageSize: null },
+      authorization,
+    ).then(({ items }) =>
+      items.map(({ id, displayName }) => ({
+        label: `${displayName} Team`,
+        value: id,
+      })),
+    );
 };
