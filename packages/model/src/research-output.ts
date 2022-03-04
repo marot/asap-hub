@@ -162,8 +162,6 @@ export type ResearchOutputResponse = {
 };
 
 export type ResearchOutputPostRequest = {
-  teamId: string;
-
   description: string;
   type: ResearchOutputType;
   subTypes: ResearchOutputSubtype[];
@@ -172,7 +170,7 @@ export type ResearchOutputPostRequest = {
   link: string;
 
   labs?: string[];
-  teams?: string[];
+  teams: string[];
 
   addedDate: string;
   asapFunded?: boolean;

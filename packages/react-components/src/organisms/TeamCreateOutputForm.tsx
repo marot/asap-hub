@@ -83,7 +83,8 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
         description !== '' ||
         link !== '' ||
         subTypes.length !== 0 ||
-        labs.length !== 0
+        labs.length !== 0 ||
+        teams.length !== 1 // Original team
       }
       onSave={() =>
         onSave({
@@ -92,7 +93,8 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
           description,
           title,
           subTypes,
-          labs: labs ? labs.map(({ value }) => value) : [],
+          labs: labs.map(({ value }) => value),
+          teams: teams.map(({ value }) => value),
         })
       }
     >

@@ -56,6 +56,7 @@ it('can submit a form when form data is valid', async () => {
     <StaticRouter>
       <TeamCreateOutputForm
         {...props}
+        team={{ ...createTeamResponse(), id: 'TEAMID' }}
         type="Lab Resource"
         onSave={saveFn}
         getLabSuggestions={getLabSuggestions}
@@ -91,6 +92,7 @@ it('can submit a form when form data is valid', async () => {
       description: 'example description',
       subTypes: ['Animal Model'],
       labs: ['1'],
+      teams: ['TEAMID'],
     });
     expect(screen.getByRole('button', { name: /Share/i })).toBeEnabled();
   });

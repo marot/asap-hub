@@ -54,7 +54,6 @@ const TeamOutput: React.FC<TeamOutputProps> = ({ teamId }) => {
   const createResearchOutput = usePostTeamResearchOutput();
 
   const defaultOutput: ResearchOutputPostRequest = {
-    teamId,
     type,
     link: 'https://hub.asap.science/',
     title: 'Output created through the ROMS form',
@@ -65,6 +64,7 @@ const TeamOutput: React.FC<TeamOutputProps> = ({ teamId }) => {
     subTypes: [],
     addedDate: new Date().toISOString(),
     tags: [],
+    teams: [teamId],
   };
 
   const getLabSuggestions = useLabSuggestions();
