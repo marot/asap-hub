@@ -67,7 +67,9 @@ const TeamCreateOutputForm: React.FC<TeamCreateOutputFormProps> = ({
     NonNullable<ComponentProps<typeof TeamCreateOutputContributorsCard>['labs']>
   >([]);
   const [teams, setTeams] = useState<
-    NonNullable<ComponentProps<typeof TeamCreateOutputContributorsCard>['labs']>
+    NonNullable<
+      ComponentProps<typeof TeamCreateOutputContributorsCard>['teams']
+    >
   >([{ label: team.displayName, value: team.id, isFixed: true }]);
   const [description, setDescription] =
     useState<ResearchOutputPostRequest['description']>('');

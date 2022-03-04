@@ -14,7 +14,7 @@ const props: ComponentProps<typeof TeamCreateOutputContributorsCard> = {
   isSaving: false,
 };
 
-describe('Labs', () => {
+describe('Labs Multiselect', () => {
   it('should render provided values', () => {
     const { getByText } = render(
       <TeamCreateOutputContributorsCard
@@ -30,14 +30,10 @@ describe('Labs', () => {
   });
   it('should be able to select from the list of options', async () => {
     const loadOptions = jest.fn();
-    loadOptions.mockReturnValue(
-      new Promise((resolve) =>
-        resolve([
-          { label: 'One Lab', value: '1' },
-          { label: 'Two Lab', value: '2' },
-        ]),
-      ),
-    );
+    loadOptions.mockResolvedValue([
+      { label: 'One Lab', value: '1' },
+      { label: 'Two Lab', value: '2' },
+    ]);
 
     const { getByText, getByLabelText, queryByText } = render(
       <TeamCreateOutputContributorsCard
@@ -56,7 +52,7 @@ describe('Labs', () => {
   });
   it('should render message when there is no match', async () => {
     const loadOptions = jest.fn();
-    loadOptions.mockReturnValue(new Promise((resolve) => resolve([])));
+    loadOptions.mockResolvedValue([]);
     const { getByLabelText, queryByText } = render(
       <TeamCreateOutputContributorsCard
         {...props}
@@ -71,7 +67,7 @@ describe('Labs', () => {
   });
 });
 
-describe('Teams', () => {
+describe('Teams Multiselect', () => {
   it('should render provided values', () => {
     const { getByText } = render(
       <TeamCreateOutputContributorsCard
@@ -87,14 +83,10 @@ describe('Teams', () => {
   });
   it('should be able to select from the list of options', async () => {
     const loadOptions = jest.fn();
-    loadOptions.mockReturnValue(
-      new Promise((resolve) =>
-        resolve([
-          { label: 'One Team', value: '1' },
-          { label: 'Two Team', value: '2' },
-        ]),
-      ),
-    );
+    loadOptions.mockResolvedValue([
+      { label: 'One Team', value: '1' },
+      { label: 'Two Team', value: '2' },
+    ]);
 
     const { getByText, getByLabelText, queryByText } = render(
       <TeamCreateOutputContributorsCard
@@ -113,7 +105,7 @@ describe('Teams', () => {
   });
   it('should render message when there is no match', async () => {
     const loadOptions = jest.fn();
-    loadOptions.mockReturnValue(new Promise((resolve) => resolve([])));
+    loadOptions.mockResolvedValue([]);
     const { getByLabelText, queryByText } = render(
       <TeamCreateOutputContributorsCard
         {...props}

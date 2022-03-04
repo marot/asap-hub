@@ -80,6 +80,7 @@ const createSchema = Joi.object<ResearchOutputPostRequest>({
   addedDate: Joi.string().required(),
   teamId: Joi.string().required(),
   labs: Joi.array().required(),
+  teams: Joi.array().required(),
 }).required();
 
 const querySchema = Joi.object({

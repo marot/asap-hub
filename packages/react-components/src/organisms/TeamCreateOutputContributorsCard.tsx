@@ -4,17 +4,17 @@ import { FormCard, LabeledMultiSelect } from '../molecules';
 import { noop } from '../utils';
 
 type TeamCreateOutputContributorsProps = {
-  getLabSuggestions: ComponentPropsWithRef<
-    typeof LabeledMultiSelect
-  >['loadOptions'];
+  getLabSuggestions: NonNullable<
+    ComponentPropsWithRef<typeof LabeledMultiSelect>['loadOptions']
+  >;
   readonly labs: ComponentPropsWithRef<typeof LabeledMultiSelect>['values'];
   readonly onChangeLabs: ComponentPropsWithRef<
     typeof LabeledMultiSelect
   >['onChange'];
 
-  getTeamSuggestions: ComponentPropsWithRef<
-    typeof LabeledMultiSelect
-  >['loadOptions'];
+  getTeamSuggestions: NonNullable<
+    ComponentPropsWithRef<typeof LabeledMultiSelect>['loadOptions']
+  >;
   readonly teams: ComponentPropsWithRef<typeof LabeledMultiSelect>['values'];
   readonly onChangeTeams: ComponentPropsWithRef<
     typeof LabeledMultiSelect

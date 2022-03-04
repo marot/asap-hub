@@ -15,7 +15,7 @@ export const Normal = () => (
       getLabSuggestions={() =>
         new Promise((resolve) => {
           setTimeout(() => {
-            resolve([{ label: 'lab name', id: '1' }]);
+            resolve([{ label: 'lab name', value: '1' }]);
           }, 1000);
         })
       }
@@ -23,7 +23,7 @@ export const Normal = () => (
       getTeamSuggestions={() =>
         new Promise((resolve) => {
           setTimeout(() => {
-            resolve([{ label: 'team name', id: '1' }]);
+            resolve([{ label: 'team name', value: '1' }]);
           }, 1000);
         })
       }
