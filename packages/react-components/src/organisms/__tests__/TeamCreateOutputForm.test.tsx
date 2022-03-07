@@ -30,6 +30,18 @@ it('renders the form', async () => {
   expect(getByText(/What are you sharing/i)).toBeVisible();
 });
 
+it('displays current team within the form', async () => {
+  const { getByText } = render(
+    <StaticRouter>
+      <TeamCreateOutputForm
+        {...props}
+        team={{ ...createTeamResponse(), displayName: 'example team' }}
+      />
+    </StaticRouter>,
+  );
+  expect(getByText('example team')).toBeVisible();
+});
+
 it('does not save when the form is missing data', async () => {
   const saveFn = jest.fn();
   render(

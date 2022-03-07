@@ -63,7 +63,6 @@ const MultiSelect: FC<MultiSelectProps> = ({
   values = [],
   onChange = noop,
 }) => {
-  const [inputValues, setInputValues] = useState(values);
   const [validationMsg, setValidationMsg] = useState('');
 
   // This is to handle a bug with Select where the right click would make it impossible to write
@@ -77,7 +76,7 @@ const MultiSelect: FC<MultiSelectProps> = ({
     isDisabled: !enabled,
     isMulti: true as const,
     placeholder,
-    value: inputValues,
+    value: values,
     components: { MultiValueRemove },
     noOptionsMessage,
     styles: reactMultiSelectStyles(!!validationMsg),
@@ -99,7 +98,6 @@ const MultiSelect: FC<MultiSelectProps> = ({
           }
           break;
       }
-      setInputValues(options);
       onChange(options);
     },
   };

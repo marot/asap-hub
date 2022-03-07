@@ -203,7 +203,7 @@ describe('/research-outputs/ route', () => {
         'title',
         'sharingStatus',
         'addedDate',
-        'teamId',
+        'teams',
         'labs',
       ])(
         'Should return a validation error when %s is missing',

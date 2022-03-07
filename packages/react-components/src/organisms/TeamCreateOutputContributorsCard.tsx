@@ -1,7 +1,6 @@
 import { ComponentPropsWithRef } from 'react';
 
 import { FormCard, LabeledMultiSelect } from '../molecules';
-import { noop } from '../utils';
 
 type TeamCreateOutputContributorsProps = {
   getLabSuggestions: NonNullable<
@@ -25,11 +24,11 @@ type TeamCreateOutputContributorsProps = {
 
 const TeamCreateOutputContributorsCard: React.FC<TeamCreateOutputContributorsProps> =
   ({
-    onChangeLabs = noop,
+    onChangeLabs,
     labs,
     getLabSuggestions,
     getTeamSuggestions,
-    onChangeTeams = noop,
+    onChangeTeams,
     teams,
     isSaving,
   }) => (
