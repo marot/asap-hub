@@ -159,7 +159,7 @@ export const useTeamSuggestions = () => {
       authorization,
     ).then(({ items }) =>
       items.map(({ id, displayName }) => ({
-        label: `${displayName} Team`,
+        label: displayName,
         value: id,
       })),
     );
