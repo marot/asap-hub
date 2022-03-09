@@ -62,7 +62,7 @@ const researchOutputPostRequestValidationSchema: JSONSchemaType<ResearchOutputPo
         type: 'array',
         items: { type: 'string' },
         nullable: true,
-      }
+      },
     },
     required: [
       'type',
