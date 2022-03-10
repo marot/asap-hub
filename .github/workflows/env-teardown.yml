@@ -2,6 +2,12 @@ name: Remove environment
 on:
   pull_request_target:
     types: [closed]
+  workflow_call:
+    inputs:
+      prNumber:
+        required: true
+        type: string
+        description: Choose which PR number to destroy    
   workflow_dispatch:
     inputs:
       prNumber:
