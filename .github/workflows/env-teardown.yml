@@ -16,13 +16,10 @@ on:
         description: Choose which PR number to destroy
 
 jobs:
-  setup:
-    if: ${{ github.event.pull_request.head.repo.full_name == 'yldio/asap-hub' }}
-    uses: ./.github/workflows/setup.yml
   sls_teardown:
     strategy:
       matrix:
-        pr: ${{ fromJson(needs.setup.outputs.pr-number) }}
+        pr: ${{ fromJson(github.event.inputs.prNnumber) }}
     needs: setup
     runs-on: ubuntu-18.04
 #    container:
