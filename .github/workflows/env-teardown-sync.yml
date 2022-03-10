@@ -19,4 +19,4 @@ jobs:
     needs: [ setup ]
     uses: ./.github/workflows/env-teardown.yml
     with:
-      prNubmer: ${{ needs.setup.outputs.badPrs }}
+      prNumber: ${{ needs.setup.outputs.badPrs }}
