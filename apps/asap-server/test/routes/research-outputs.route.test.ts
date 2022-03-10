@@ -133,6 +133,7 @@ describe('/research-outputs/ route', () => {
         subTypes,
         labs,
         authors,
+        teams,
       } = getResearchOutputResponse();
       return {
         type,
@@ -142,18 +143,18 @@ describe('/research-outputs/ route', () => {
         sharingStatus,
         usedInPublication,
         addedDate,
-        teamId: '123',
         description,
         tags,
         subTypes,
         labs: labs.map(({ id }) => id),
         authors: authors.map(({ id }) => id),
+        teams: teams.map(({ id }) => id),
       };
     };
+
     test('Should return a 201 when is hit', async () => {
       const createResearchOutputRequest = {
         ...getCreateResearchOutput(),
-        teamId: 'team-id-1',
       };
 
       researchOutputControllerMock.create.mockResolvedValueOnce({
@@ -163,10 +164,9 @@ describe('/research-outputs/ route', () => {
       const response = await supertest(app)
         .post('/research-outputs')
         .send(createResearchOutputRequest)
-        .set('Accept', 'application/json')
-        .expect('Content-Type', /json/)
-        .expect(201);
+        .set('Accept', 'application/json');
 
+      expect(response.status).toBe(201);
       expect(researchOutputControllerMock.create).toBeCalledWith(
         createResearchOutputRequest,
       );
@@ -182,7 +182,7 @@ describe('/research-outputs/ route', () => {
 
       await supertest(app)
         .post('/research-outputs')
-        .send({ ...researchOutput, teamId: 'team-id-1' })
+        .send({ ...researchOutput })
         .set('Accept', 'application/json')
         .expect(500);
     });
@@ -205,8 +205,7 @@ describe('/research-outputs/ route', () => {
         'title',
         'sharingStatus',
         'addedDate',
-        'teamId',
-        'labs',
+        'teams',
       ])(
         'Should return a validation error when %s is missing',
         async (field) => {
@@ -215,7 +214,6 @@ describe('/research-outputs/ route', () => {
             .post('/research-outputs/')
             .send({
               ...researchOutput,
-              teamId: 'team-id-1',
               [field]: undefined,
             });
 
